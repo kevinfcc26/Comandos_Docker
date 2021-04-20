@@ -41,3 +41,15 @@
 * `docker volume ls`: Muestra todos los volumenes que hay 
 * `docker volume create --`: crea un nuevo volumen, es necesario crearlo antes de correr 'docker run'
 * `docker run -p 80:4000 -v $(pwd)`
+* `docker run -dp 3000:3000 -w /app -v "$(pwd):/app" node:12-alpine sh -c "yarn install  && yarn run dev"`
+
+## docker swarm
+
+* `docker info`: ver la configuración de docker.
+* `docker swarn init`: inicia docker swarn
+* `docker node ls`: muestra los nodos creados
+* `docker service --help`: los servicios son lo mismo que contenedores pero estos funcionan con swarn
+* `docker service ls`: lista todos los servicios
+* `docker service create alpine ping 8.8.8.8`: monta un servicio con la imagen alpine
+* `docker service ps <name>`: muestra información detallada del servicio name
+* `docker service update <ID> --replicas 3`: actualiza el numero de replicas del servicio a 3
