@@ -8,7 +8,10 @@
 * `docker container exec -it` : run aditional comand in existing container
 * `docker container run  -it --name proxy nginx bash`
 * `docker container exec -it mysql bash` : entra al shell para ejecutar comandos
-* `docker container logs -f` : muestra los lo
+* `docker container logs -f <containerId>` : muestra los logs del contenedor
+* `docker container top <containerID>` : muestra los servicios ejecutados dentro del contenedor
+* `docker container inspect <containerID>` :  Muestra la configuración de todo el contenedor
+* `docker container stats`: muesta el consumo en rendiemiento de todos los contenedores ejecutados
 
 ## network
 * `docker container run -p 40:80 --name webhost -d nginx`
