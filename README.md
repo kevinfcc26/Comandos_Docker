@@ -16,6 +16,7 @@
 * `docker container port webhost` : muestra el puerto por el cual esta montada la aplicacción
 * `docker container inspect --format '{{ .NetworkSettings.IPAddress }}' webhost` : muestra la direccion ip del contenedor
 * `docker container run -d --name new_nginx --network my_app_net`: crea un contenedor con una red
+* `docker container run --rm -it centos:7 bash` : crea un contenedor y se elimina cuando se sale del bash.
 
 ## network
 * `docker network ls` : lista todas las redes que hay
@@ -24,10 +25,6 @@
 * `docker network connect <networkId> <networkName>`: Asigna la red <networkName> a <containerName>
 * `docker network disconnect <networkId> <networkName>`: Elimina la red <networkName> de <containerName>
 * `docker network create <networkName>` : Crea una red con el nombre <networkName>
-
-------------------
-* `docker container run --rm -it centos:7 bash` : crea un contenedor y se elimina cuando se sale del bash.
-* `docker network creade dude` : crea una nueva red llamada dude
 
 ## Dockerfile
 * FROM: imagen minima para empezar, aphine, debian, ubuntu, centos, defora
