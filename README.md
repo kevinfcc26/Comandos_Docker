@@ -25,6 +25,13 @@
 * `docker network connect <networkId> <networkName>`: Asigna la red <networkName> a <containerName>
 * `docker network disconnect <networkId> <networkName>`: Elimina la red <networkName> de <containerName>
 * `docker network create <networkName>` : Crea una red con el nombre <networkName>
+  
+----------------------------------------------
+## DNS
+* `docker network create dude`: Crea una red llamada dude
+* `docker container run -d --network dude --network-alias search elasticsearch:2`: Crea un contenedor de la imagen elasticseach, le asigna la red dude y un alias en la red de search
+* `docker container run -d --network dude --network-alias search elasticsearch:2`: Crea un contenedor de la imagen elasticseach, le asigna la red dude y un alias en la red de search
+* `docker container run --rm --network dude alpine nslookup search`: ejecuta el comando nslookup en el contenedor y lo elimina
 
 ## Dockerfile
 * FROM: imagen minima para empezar, aphine, debian, ubuntu, centos, defora
