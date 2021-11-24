@@ -1,6 +1,7 @@
 # Codigos utiles en docker
 
-## docker container
+## Docker container
+
 * `docker container run --name proxy nginx` : monta un contenerdor con la imagen nginx y el nombre proxy.
 * `docker ps` : lista los contenedores que hay 
 * `docker container ls` : lista los contenerdores que hay
@@ -18,7 +19,8 @@
 * `docker container run -d --name new_nginx --network my_app_net`: crea un contenedor con una red
 * `docker container run --rm -it centos:7 bash` : crea un contenedor y se elimina cuando se sale del bash.
 
-## network
+## Network
+
 * `docker network ls` : lista todas las redes que hay
 * `docker network inspect <networkId>`: Muestra el detalle de una red
 * `docker network create --driver <networkName>`: Crea una red con el nombre <networkName> y le asigna el controlador a la red
@@ -26,29 +28,30 @@
 * `docker network disconnect <networkId> <networkName>`: Elimina la red <networkName> de <containerName>
 * `docker network create <networkName>` : Crea una red con el nombre <networkName>
   
-----------------------------------------------
 ## DNS
+
 * `docker network create dude`: Crea una red llamada dude
 * `docker container run -d --network dude --network-alias search elasticsearch:2`: Crea un contenedor de la imagen elasticseach, le asigna la red dude y un alias en la red de search
 * `docker container run -d --network dude --network-alias search elasticsearch:2`: Crea un contenedor de la imagen elasticseach, le asigna la red dude y un alias en la red de search
 * `docker container run --rm --network dude alpine nslookup search`: ejecuta el comando nslookup en el contenedor y lo elimina
 
 ## Dockerfile
+
 * FROM: imagen minima para empezar, aphine, debian, ubuntu, centos, defora
 * ENV: environment variables
 * RUN: corre los script que necesitemos
 * EXPOSE: expone el puerto en la coneccion virtual de docker
-* CMD: configura el comando a correr 
-
-
+* CMD: configura el comando a correr
 * WORKDIR: escoge la carpeta de trabajo
 * COPY : copia toda los archivos locales en la imagen
 
------------------------
 ## volumens
+
 * `docker volume create <nombre_volume>` : crea un volumen nuevo con el nombre <nombre_volumen>
 * `docker container run -v <nombre_volume>:<workdir_destination>`: corre un contenedor con el nombre con un volumen
+
 ------------------------
+
 * `docker image build -t customnginx .` : crea una imagen con la configuracion del dockerfile
 * `docker volume ls`: Muestra todos los volumenes que hay 
 * `docker volume create --`: crea un nuevo volumen, es necesario crearlo antes de correr 'docker run'
