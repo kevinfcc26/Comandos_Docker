@@ -45,6 +45,10 @@
 * COPY : copia toda los archivos locales en la imagen
 
 -----------------------
+## volumens
+* `docker volume create <nombre_volume>` : crea un volumen nuevo con el nombre <nombre_volumen>
+* `docker container run -v <nombre_volume>:<workdir_destination>`: corre un contenedor con el nombre con un volumen
+------------------------
 * `docker image build -t customnginx .` : crea una imagen con la configuracion del dockerfile
 * `docker volume ls`: Muestra todos los volumenes que hay 
 * `docker volume create --`: crea un nuevo volumen, es necesario crearlo antes de correr 'docker run'
