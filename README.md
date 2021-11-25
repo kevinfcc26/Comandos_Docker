@@ -49,6 +49,8 @@
 
 * `docker volume create <nombre_volume>` : crea un volumen nuevo con el nombre <nombre_volumen>
 * `docker container run -v <nombre_volume>:<workdir_destination>`: corre un contenedor con el nombre con un volumen
+### bind mounts
+* `docker container run -v <path_host>:<path_container>`: crea una montura de la carpeta <path_host> y lo copia todo en <path_container>
 
 ------------------------
 
