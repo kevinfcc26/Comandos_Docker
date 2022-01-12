@@ -70,3 +70,6 @@
 * `docker service create alpine ping 8.8.8.8`: monta un servicio con la imagen alpine
 * `docker service ps <name>`: muestra información detallada del servicio name
 * `docker service update <ID> --replicas 3`: actualiza el numero de replicas del servicio a 3
+* `docker service rm <ID>`: elimina el servio y tambien todos los contenedores asociados al servicio
+* `docker swarm join-token manager`: obtiene el script para asignar mas nodos
+* `docker node update --role manager <nodeId>`: actualiza el rol del node
