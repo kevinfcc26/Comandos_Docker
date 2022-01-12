@@ -73,3 +73,7 @@
 * `docker service rm <ID>`: elimina el servio y tambien todos los contenedores asociados al servicio
 * `docker swarm join-token manager`: obtiene el script para asignar mas nodos
 * `docker node update --role manager <nodeId>`: actualiza el rol del node
+* `dockern network create --driver overlay <Name>`: crea una red con el driver overlay y el nombre <name>
+* `docker service create --name psql --network mydrupal -e POSTGRES_PASSWORD=mypass postgres`: crea un servicio con el nombre psql conectandolo a la red mydrupal y usando la imagen postgres
+*  `docker service inspect <serviceName>`: muestra en detalle la configuracion del servicio
+  
