@@ -76,4 +76,9 @@
 * `dockern network create --driver overlay <Name>`: crea una red con el driver overlay y el nombre <name>
 * `docker service create --name psql --network mydrupal -e POSTGRES_PASSWORD=mypass postgres`: crea un servicio con el nombre psql conectandolo a la red mydrupal y usando la imagen postgres
 *  `docker service inspect <serviceName>`: muestra en detalle la configuracion del servicio
+
+## Docker secrets
+
+* `docker secret create <secretName> <value>`: crea un secreto con el nombre <secretName> y el valor <value> el valor puede estar en un archivo txt
+* `docker service create --name psql --secret psql_user --secret psql_pass -e POSTGRES_PASSWORD_FILE=/run/secrets/psql_pass -e POSTGRES_USER_FILE=/run/secrets/psql_user postgres`: crea un servicio con los secretos de docker secrets
   
